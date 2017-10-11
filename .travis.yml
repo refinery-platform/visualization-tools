@@ -17,18 +17,16 @@ env:
     - DJANGO_SETTINGS_MODULE=config.settings.prod
 install:
   - git clone https://github.com/refinery-platform/refinery-platform.git
-  - cp ./*.json refinery-platform/refinery/tool_manager/visualization_annotations
+  - cp definitions/*.json refinery-platform/refinery/tool_manager/visualization_annotations
   - cd refinery-platform
-  - pip install -r requirements.txt
+  - pip install -r requirements.txt --quiet
    # Vagrant is not used on travis: This user is just for the database.
   - createuser --createdb --no-superuser --no-createrole vagrant
   - createdb -O vagrant refinery
-  - sudo mkdir /data
-  - sudo chown $USER /data
   - pushd refinery
   # See http://www.stuartellis.eu/articles/erb/#running-erb-from-the-command-line
   - erb config/config.json.erb > config/config.json
   - python manage.py migrate --noinput
-  
+
 script:
   - python manage.py generate_tool_definitions --visualizations
