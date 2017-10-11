@@ -1,1 +1,1 @@
-# visualization-tools
+# visualization-tools [![Build Status](https://travis-ci.org/refinery-platform/visualization-tools.svg?branch=master)](https://travis-ci.org/refinery-platform/visualization-tools)

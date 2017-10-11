@@ -1,0 +1,28 @@
+{
+  "name": "HiGlass",
+  "tool_type": "VISUALIZATION",
+  "annotation": {
+    "container_input_path": "/data/input.json",
+    "extra_directories": ["/refinery-data"],
+    "image_name": "scottx611x/refinery-higlass-docker:v0.1.0",
+    "description": "HiGlass is a web-based viewer for genome interaction maps featuring synchronized navigation of multiple views as well as continuous zooming and panning for navigation across genomic loci and resolutions. It supports visual comparison of Hi-C and other genomic data from different experimental conditions and can be used to efficiently identify salient outcomes of experimental perturbations, generate new hypotheses, and share the results with the community.",
+    "parameters": [],
+    "file_relationship": {
+      "file_relationship": {},
+      "value_type": "LIST",
+      "name": "List of N Input Files",
+      "input_files": [
+        {
+          "allowed_filetypes": [
+            {"name": "COOLER"},
+            {"name": "HITILE"},
+            {"name": "BIGWIG"},
+            {"name": "BEDGRAPH"}
+          ],
+          "name": "HiGlass Input File",
+          "description": "Input File Description"
+        }
+      ]
+    }
+  }
+}
