@@ -17,7 +17,7 @@ env:
     - DJANGO_SETTINGS_MODULE=config.settings.prod
 install:
   - git clone https://github.com/refinery-platform/refinery-platform.git
-  - cp definitions/*.json refinery-platform/refinery/tool_manager/visualization_annotations
+  - cp tool-annotations/*.json refinery-platform/refinery/tool_manager/visualization_annotations
   - cd refinery-platform
   - pip install -r requirements.txt --quiet
    # Vagrant is not used on travis: This user is just for the database.
