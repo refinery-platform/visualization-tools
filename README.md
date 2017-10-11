@@ -3,7 +3,7 @@
 This Repo is around to keep track of [`Visualization Tool Annotations`](https://github.com/refinery-platform/refinery-platform/wiki/Annotating-&-Importing-Refinery-Tools#visualization-tool-annotations) that are compatible with the [Refinery Platform](https://github.com/refinery-platform/refinery-platform)
 
 ### Before Coding:
-- See here for an example [`Visualization Tool Annotations`](https://github.com/refinery-platform/refinery-platform/wiki/Annotating-&-Importing-Refinery-Tools#visualization-tool-annotations)
+- See here for info on [`Visualization Tool Annotations`](https://github.com/refinery-platform/refinery-platform/wiki/Annotating-&-Importing-Refinery-Tools#visualization-tool-annotations)
 
 ### Adding new Visualization Tool Annotations:
 - Make a PR here with your new `.json` file added to the `tool-annotations` directory
