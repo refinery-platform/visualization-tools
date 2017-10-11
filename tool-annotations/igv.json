@@ -8,8 +8,8 @@
     "description": "Lightweight HTML-5 version of the Integrative Genomics Viewer (http://www.broadinstitute.org/igv).",
     "parameters": [
       {
-        "name": "Genome Build Param",
-        "description": "Genome Build Param description",
+        "name": "Genome Build",
+        "description": "Reference genome build to use",
         "value_type": "GENOME_BUILD",
         "default_value": "hg19"
       }
@@ -17,7 +17,7 @@
     "file_relationship": {
       "file_relationship": {},
       "value_type": "LIST",
-      "name": "List of N Input Files",
+      "name": "List of Input Files",
       "input_files": [
         {
           "allowed_filetypes": [
@@ -30,8 +30,8 @@
             {"name": "VCF"},
             {"name": "SEG"}
           ],
-          "name": "IGV Input File",
-          "description": "IGV Compatible Input File"
+          "name": "Input File",
+          "description": "IGV-compatible Input File"
         }
       ]
     }
