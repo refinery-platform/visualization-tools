@@ -1,0 +1,23 @@
+{
+  "name": "Nginx Basic",
+  "tool_type": "VISUALIZATION",
+  "annotation": {
+    "container_input_path": "/var/www/html/input.json",
+    "extra_directories": ["/refinery-data"],
+    "image_name": "nginx:1.10.3-alpine",
+    "description": "This visualization spins up an nginx container",
+    "parameters": [],
+    "file_relationship": {
+      "file_relationship": {},
+      "value_type": "LIST",
+      "name": "List of N Input Files",
+      "input_files": [
+        {
+          "allowed_filetypes": [{"name": "TXT"}],
+          "name": "Input File",
+          "description": "Input File Description"
+        }
+      ]
+    }
+  }
+}
