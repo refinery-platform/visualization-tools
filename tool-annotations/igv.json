@@ -5,7 +5,7 @@
     "container_input_path": "/var/www/data/input.json",
     "extra_directories": ["/refinery-data"],
     "image_name": "gehlenborglab/docker_igv_js:utilize_node_meta_info",
-    "description": "Explore various types of genomic data (see http://www.broadinstitute.org/igv for details).",
+    "description": "Explore various types of genomic data (see https://github.com/igvteam/igv.js for details).",
     "parameters": [
       {
         "name": "Genome Build",
