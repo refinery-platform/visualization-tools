@@ -30,3 +30,7 @@ install:
 
 script:
   - python manage.py generate_tool_definitions --visualizations
+  
+notifications:
+  slack: refinery-platform:YD1N3ifQ4jaiIqaiGmmwF7Tq
+  on_success: never
