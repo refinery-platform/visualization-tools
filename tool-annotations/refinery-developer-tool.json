@@ -1,11 +1,11 @@
 {
-  "name": "Nginx Basic",
+  "name": "Display Refinery Tool Launch Data",
   "tool_type": "VISUALIZATION",
   "annotation": {
-    "container_input_path": "/var/www/html/input.json",
+    "container_input_path": "/usr/share/nginx/html/data/",
     "extra_directories": ["/refinery-data"],
-    "image_name": "nginx:1.10.3-alpine",
-    "description": "This visualization spins up an nginx container",
+    "image_name": "scottx611x/refinery-developer-vis-tool:v0.0.1",
+    "description": "This visualization tool displays all of the data that Refinery has sent over to it for a given Tool launch",
     "parameters": [],
     "file_relationship": {
       "file_relationship": {},
