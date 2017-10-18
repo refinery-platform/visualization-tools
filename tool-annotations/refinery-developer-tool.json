@@ -4,7 +4,7 @@
   "annotation": {
     "container_input_path": "/usr/share/nginx/html/data/input.json",
     "extra_directories": ["/refinery-data"],
-    "image_name": "scottx611x/refinery-developer-vis-tool:v0.0.2",
+    "image_name": "scottx611x/refinery-developer-vis-tool:v0.0.3",
     "description": "This visualization tool displays all of the data that Refinery has sent over to it for a given Tool launch",
     "parameters": [],
     "file_relationship": {
