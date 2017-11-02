@@ -15,8 +15,10 @@ env:
     # These env vars are available to every build
     - PYTHONPATH=$PYTHONPATH:../refinery:../refinery/config
     - DJANGO_SETTINGS_MODULE=config.settings.prod
-  - REFINERY_BRANCH=develop
-  - REFINERY_BRANCH=master
+  matrix:
+    - REFINERY_BRANCH=develop
+    - REFINERY_BRANCH=master
+
 install:
   - git clone https://github.com/refinery-platform/refinery-platform.git
   - cp tool-annotations/*.json refinery-platform/refinery/tool_manager/visualization_annotations
