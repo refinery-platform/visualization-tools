@@ -44,7 +44,7 @@ script:
       fi
   - >
       if [ "$REFINERY_BRANCH" == "develop" ]; then
-        python ci_tests.py
+        python ci_tests.py;
       fi
           
   
