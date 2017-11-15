@@ -31,7 +31,7 @@ install:
   # See http://www.stuartellis.eu/articles/erb/#running-erb-from-the-command-line
   - erb config/config.json.erb > config/config.json
   - python manage.py migrate --noinput
-  - popd && popd
+  - popd &&
 
 script:
   - python ci_tests.py

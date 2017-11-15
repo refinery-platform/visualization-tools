@@ -18,7 +18,7 @@ class ToolLoadingTests(unittest.TestCase):
             print tool_annotation_name
             try:
                 subprocess.check_call(
-                    "python refinery-platform/manage.py load_tools --visualizations {}".format(
+                    "python refinery-platform/refinery/manage.py load_tools --visualizations {}".format(
                         tool_annotation_name
                     )
                 )
