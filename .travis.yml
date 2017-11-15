@@ -31,9 +31,10 @@ install:
   # See http://www.stuartellis.eu/articles/erb/#running-erb-from-the-command-line
   - erb config/config.json.erb > config/config.json
   - python manage.py migrate --noinput
+  - popd
 
 script:
-  - python manage.py generate_tool_definitions --visualizations igv --visualizations higlass --visualizations refinery-developer-tool
+  - python ci_tests.py
 
   
 notifications:
