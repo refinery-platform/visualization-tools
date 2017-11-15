@@ -21,7 +21,6 @@ env:
 
 install:
   - git clone https://github.com/refinery-platform/refinery-platform.git
-  - cp tool-annotations/*.json refinery-platform/refinery/tool_manager/visualization_annotations
   - cd refinery-platform
   - git checkout $REFINERY_BRANCH
   - pip install -r requirements.txt --quiet
@@ -34,7 +33,8 @@ install:
   - python manage.py migrate --noinput
 
 script:
-  - python manage.py generate_tool_definitions --visualizations
+  - python manage.py generate_tool_definitions --visualizations igv --visualizations higlass --visualizations refinery-developer-tool
+
   
 notifications:
   slack: refinery-platform:YD1N3ifQ4jaiIqaiGmmwF7Tq
