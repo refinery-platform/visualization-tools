@@ -9,7 +9,7 @@ class ToolLoadingTests(unittest.TestCase):
 
     def setUp(self):
         self.tool_annotation_names = [
-            ntpath.basename(tool_annotation_name).replace(".json", "")
+            os.path.join("../tool-annotations/", tool_annotation_name)
             for tool_annotation_name in glob.glob("tool-annotations/*.json")
         ]
 
