@@ -9,7 +9,7 @@ class ToolLoadingTests(unittest.TestCase):
 
     def setUp(self):
         self.tool_annotation_names = [
-            os.path.join("~/refinery-platform/visualization-tools/", tool_annotation_name)
+            tool_annotation_name
             for tool_annotation_name in glob.glob("tool-annotations/*.json")
         ]
 
