@@ -11,7 +11,7 @@
         "name": "Cluster",
         "description": "Should the data be clustered?",
         "value_type": "BOOLEAN",
-        "default_value": "false"
+        "default_value": false
       }
     ],
     "file_relationship": {
