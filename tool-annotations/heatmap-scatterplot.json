@@ -4,22 +4,42 @@
   "annotation": {
     "container_input_path": "/data/input.json",
     "extra_directories": ["/refinery-data"],
-    "image_name": "mccalluc/heatmap_scatter_dash:v0.0.1",
+    "image_name": "mccalluc/heatmap_scatter_dash:v0.0.5",
     "description": "Heatmaps and scatterplots from matrix data",
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "Cluster Rows",
+        "description": "Should rows of heatmap be clustered?",
+        "value_type": "BOOLEAN",
+        "default_value": false
+      },
+      {
+        "name": "Cluster Cols",
+        "description": "Should columns of heatmap be clustered?",
+        "value_type": "BOOLEAN",
+        "default_value": false
+      }
+    ],
     "file_relationship": {
-      "file_relationship": {},
-      "value_type": "LIST",
-      "name": "List of Input Files",
-      "input_files": [
-        {
-          "allowed_filetypes": [
-            {"name": "CSV"}
-          ],
-          "name": "Input File",
-          "description": "CSV with genes as rows and conditions as columns"
-        }
-      ]
+      "value_type": "PAIR",
+      "name": "Paired lists of count files and differential expression files",
+      "file_relationship": {
+         "value_type": "LIST",
+         "name": "Lists of count files and differential expression files",
+         "file_relationship": {},
+         "input_files": [
+           {
+             "allowed_filetypes": [{"name": "CSV"}],
+             "name": "Count Files",
+             "description": "CSVs with genes as rows and conditions as columns"
+           },
+           {
+             "allowed_filetypes": [{"name": "CSV"}],
+             "name": "Differential Expression Files",
+             "description": "CSV with giving differential expression information"
+          }
+        ]
+      }
     }
   }
 }
