@@ -18,7 +18,7 @@
         "description": "Should columns of heatmap be clustered?",
         "value_type": "BOOLEAN",
         "default_value": false
-      }
+      },
       {
         "name": "api_prefix",
         "description": "API prefix",
