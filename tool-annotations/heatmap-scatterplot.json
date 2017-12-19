@@ -42,7 +42,7 @@
            {
              "allowed_filetypes": [{"name": "CSV"}],
              "name": "Differential Expression Files",
-             "description": "CSV with giving differential expression information"
+             "description": "CSVs with differential expression information"
           }
         ]
       }
