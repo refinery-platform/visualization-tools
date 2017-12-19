@@ -30,14 +30,9 @@
          "input_files": [
            {
              "allowed_filetypes": [{"name": "CSV"}],
-             "name": "Count Files",
-             "description": "CSVs with genes as rows and conditions as columns"
-           },
-           {
-             "allowed_filetypes": [{"name": "CSV"}],
-             "name": "Differential Expression Files",
-             "description": "CSVs with differential expression information"
-          }
+             "name": "Count Files & Differential Expression Files",
+             "description": "CSVs with genes as rows and conditions as columns & with differential expression information"
+           }
         ]
       }
     }
