@@ -17,39 +17,29 @@
         "name": "Cluster Cols",
         "description": "Should columns of heatmap be clustered?",
         "value_type": "BOOLEAN",
-        "default_value": false,
-        "value": true
-      },
+        "default_value": false
+      }
     ],
     "file_relationship": {
-      "file_relationship": {
-      
-      
-      "input_files": [
-        {
-          "allowed_filetypes": [
-            {"name": "CSV"}
-          ],
-          "name": "Count Files",
-          "description": "CSVs with genes as rows and conditions as columns"
-        }
-      ]
-        
-        
-      "input_files": [
-        {
-          "allowed_filetypes": [
-            {"name": "CSV"}
-          ],
-          "name": "Differential Expression Files",
-          "description": "CSV with giving differential expression information"
-        }
-      ]
-      
-      
-      },
       "value_type": "PAIR",
-      "name": "Count files and differential expression files"
+      "name": "Paired lists of count files and differential expression files",
+      "file_relationship": {
+         "value_type": "LIST",
+         "name": "Lists of count files and differential expression files",
+         "file_relationship": {},
+         "input_files": [
+           {
+             "allowed_filetypes": [{"name": "CSV"}],
+             "name": "Count Files",
+             "description": "CSVs with genes as rows and conditions as columns"
+           },
+           {
+             "allowed_filetypes": [{"name": "CSV"}],
+             "name": "Differential Expression Files",
+             "description": "CSV with giving differential expression information"
+          }
+        ]
+      }
     }
   }
 }
