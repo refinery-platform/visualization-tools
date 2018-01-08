@@ -5,9 +5,9 @@ This Repo is around to keep track of [`Visualization Tool Annotations`](https://
 ### Before Coding:
 - See here for info on [`Visualization Tool Annotations`](https://github.com/refinery-platform/refinery-platform/wiki/Annotating-&-Importing-Refinery-Tools#visualization-tool-annotations)
 
-### Adding new Visualization Tool Annotations:
-- Make a PR here with your new `.json` file added to the `tool-annotations` directory
-- The CI pipeline will attempt to load your tool into a `Refinery` instance
+### Adding/Editing Visualization Tool Annotations:
+- Make a PR here with your `.json` file added to the `tool-annotations` directory
+- The CI pipeline will attempt to load your tool into a [`Refinery`](https://github.com/refinery-platform/refinery-platform) instance
 - Changes can be merged if your build passes!
 
 ### Related Repos:
