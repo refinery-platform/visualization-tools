@@ -15,3 +15,4 @@ This Repo is around to keep track of [`Visualization Tool Annotations`](https://
 - [refinery higlass docker](https://github.com/scottx611x/refinery-higlass-docker)
 - [refinery jupyter docker](https://github.com/scottx611x/refinery-jupyter-docker)
 - [refinery-developer-vis-tool](https://github.com/scottx611x/refinery-developer-vis-tool)
+- [heatmap-scatter-dash](https://github.com/refinery-platform/heatmap-scatter-dash)
