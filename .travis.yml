@@ -37,17 +37,9 @@ script:
   # TODO: Temp fix due to features from 
   # https://github.com/refinery-platform/refinery-platform/pull/2374 
   # not being included in refinery-platform's master branch yet.
-  - >
-      if [ "$REFINERY_BRANCH" == "master" ]; then
-        cp tool-annotations/*.json refinery-platform/refinery/tool_manager/visualization_annotations;
-        python refinery-platform/refinery/manage.py generate_tool_definitions --visualizations;
-      fi
-  - >
-      if [ "$REFINERY_BRANCH" == "develop" ]; then
-        python ci_tests.py;
-      fi
-          
-  
+  - echo $REFINERY_BRANCH
+  - python ci_tests.py
+
 notifications:
   slack: refinery-platform:YD1N3ifQ4jaiIqaiGmmwF7Tq
   on_success: never
