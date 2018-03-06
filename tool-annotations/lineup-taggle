@@ -1,0 +1,12 @@
+{
+  "name": "Caleydo Lineup",
+  "tool_type": "VISUALIZATION",
+  "annotation": {
+    "container_input_path": "/data/input.json",
+    "extra_directories": ["/refinery-data"],
+    "image_name": "mccalluc/lineup_refinery:v0.0.1",
+    "description": "Create, visualize and explore rankings of items based on a set of heterogeneous attributes.",
+    "parameters": [],
+    "file_relationship": {}
+  }
+}
