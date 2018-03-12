@@ -7,6 +7,17 @@
     "image_name": "mccalluc/lineup_refinery:v0.0.3",
     "description": "Create, visualize and explore rankings of items based on a set of heterogeneous attributes.",
     "parameters": [],
-    "file_relationship": {}
+    "file_relationship": {
+      "file_relationship": {},
+      "value_type": "LIST",
+      "name": "List of N Input Files",
+      "input_files": [
+        {
+          "allowed_filetypes": [{"name": "TXT"}],
+          "name": "Input File",
+          "description": "Dummy file_relationships for now. This tool can't accept Data from Refinery yet"
+        }
+      ]
+    }
   }
 }
