@@ -2,9 +2,8 @@
   "name": "Display Refinery Tool Launch Data",
   "tool_type": "VISUALIZATION",
   "annotation": {
-    "container_input_path": "/usr/share/nginx/html/data/input.json",
     "extra_directories": ["/refinery-data"],
-    "image_name": "scottx611x/refinery-developer-vis-tool:v0.0.4",
+    "image_name": "scottx611x/refinery-developer-vis-tool:v0.0.6",
     "description": "This visualization tool displays all of the data that Refinery has sent over to it for a given Tool launch",
     "parameters": [],
     "file_relationship": {
