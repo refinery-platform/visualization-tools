@@ -13,7 +13,7 @@
       "name": "List of N Input Files",
       "input_files": [
         {
-          "allowed_filetypes": [{"name": "TXT"}, {"name": "CSV"}, {"name": "TSV"}],
+          "allowed_filetypes": [{"name": "TXT"}, {"name": "CSV"}, {"name": "TABULAR"}],
           "name": "Input File",
           "description": "Select CSVs, TSVs, or other tabular files"
         }
