@@ -4,7 +4,7 @@
   "annotation": {
     "container_input_path": "/data/input.json",
     "extra_directories": ["/refinery-data"],
-    "image_name": "mccalluc/lineup_refinery:v0.0.3",
+    "image_name": "mccalluc/lineup_refinery:v0.0.7",
     "description": "Create, visualize and explore rankings of items based on a set of heterogeneous attributes.",
     "parameters": [],
     "file_relationship": {
@@ -13,9 +13,9 @@
       "name": "List of N Input Files",
       "input_files": [
         {
-          "allowed_filetypes": [{"name": "TXT"}],
+          "allowed_filetypes": [{"name": "TXT"}, {"name": "CSV"}, {"name": "TABULAR"}],
           "name": "Input File",
-          "description": "Dummy file_relationships for now. This tool can't accept Data from Refinery yet"
+          "description": "Select CSVs, TSVs, or other tabular files"
         }
       ]
     }
