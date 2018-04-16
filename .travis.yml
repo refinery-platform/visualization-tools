@@ -5,7 +5,7 @@ cache:
   - pip
 
 python:
-  - 2.7
+  - 2.7.10
 
 services:
   - postgresql
