@@ -7,8 +7,15 @@ cache:
 python:
   - 2.7
 
-services:
-  - postgresql
+addons:
+  postgresql: "10"
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
+env:
+  global:
+  - PGPORT=5433
 
 env:
   global:
@@ -23,8 +30,8 @@ install:
   - git clone https://github.com/refinery-platform/refinery-platform.git
   - pushd refinery-platform
   - git checkout $REFINERY_BRANCH
-  - pip install --upgrade pip
-  - pip install -r requirements.txt --quiet
+  - pip install psycopg2==2.7.*
+  - pip install -r requirements.txt
    # Vagrant is not used on travis: This user is just for the database.
   - createuser --createdb --no-superuser --no-createrole vagrant
   - createdb -O vagrant refinery
