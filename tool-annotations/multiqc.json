@@ -1,0 +1,23 @@
+{
+  "name": "MultiQC",
+  "tool_type": "VISUALIZATION",
+  "annotation": {
+    "container_input_path": "/data/input.json",
+    "extra_directories": ["/data"],
+    "image_name": "mccalluc/qualimap_multiqc_refinery:v0.0.1",
+    "description": "MultiQC provides reports on a variety of workflow outputs.",
+    "parameters": [],
+    "file_relationship": {
+      "file_relationship": {},
+      "value_type": "LIST",
+      "name": "List of N Input Files",
+      "input_files": [
+        {
+          "allowed_filetypes": [{"name": "TODO: Is there a wild-card option?"}],
+          "name": "Input File",
+          "description": "Input File Description"
+        }
+      ]
+    }
+  }
+}
