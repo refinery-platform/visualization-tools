@@ -6,7 +6,7 @@
     "description": "Minimal demonstration that R Shiny Applications can work in this framework",
     "parameters": [],
     "file_relationship": {
-      "extra_directories": [],
+      "extra_directories": ["/unused/but/required"],
       "file_relationship": {},
       "value_type": "LIST",
       "name": "List of N Input Files",
