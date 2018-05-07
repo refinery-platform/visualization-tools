@@ -1,0 +1,21 @@
+{
+  "name": "R Shiny Demo",
+  "tool_type": "VISUALIZATION",
+  "annotation": {
+    "image_name": "mccalluc/shiny_demo:v0.0.1",
+    "description": "Minimal demonstration that R Shiny Applications could be used in this framework",
+    "parameters": [],
+    "file_relationship": {
+      "file_relationship": {},
+      "value_type": "LIST",
+      "name": "List of N Input Files",
+      "input_files": [
+        {
+          "allowed_filetypes": [{"name": "TXT"}],
+          "name": "Input File",
+          "description": "Input File Description"
+        }
+      ]
+    }
+  }
+}
