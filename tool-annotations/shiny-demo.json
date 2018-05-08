@@ -2,7 +2,7 @@
   "name": "R Shiny Demo",
   "tool_type": "VISUALIZATION",
   "annotation": {
-    "image_name": "mccalluc/shiny_demo:v0.0.1",
+    "image_name": "mccalluc/shiny_demo:v0.0.2",
     "description": "Minimal demonstration that R Shiny Applications can work in this framework",
     "parameters": [],
     "extra_directories": [],
