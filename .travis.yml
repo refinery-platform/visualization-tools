@@ -17,7 +17,7 @@ env:
     - DJANGO_SETTINGS_MODULE=config.settings.prod
   matrix:
     - REFINERY_BRANCH=develop
-    - REFINERY_BRANCH=master
+    # - REFINERY_BRANCH=master
 
 install:
   - git clone https://github.com/refinery-platform/refinery-platform.git
