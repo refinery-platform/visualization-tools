@@ -4,7 +4,7 @@
   "annotation": {
     "container_input_path": "/data/input.json",
     "extra_directories": ["/refinery-data"],
-    "image_name": "scottx611x/refinery-higlass-docker:v0.3.0",
+    "image_name": "scottx611x/refinery-higlass-docker:v0.3.1",
     "description": "Explore genome interaction maps, including those arising from Hi-C data (see http://higlass.io for details).",
     "parameters": [],
     "file_relationship": {
