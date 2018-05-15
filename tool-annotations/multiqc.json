@@ -3,7 +3,7 @@
   "tool_type": "VISUALIZATION",
   "annotation": {
     "extra_directories": ["/data"],
-    "image_name": "mccalluc/qualimap_multiqc_refinery:v0.0.6",
+    "image_name": "mccalluc/qualimap_multiqc_refinery:v0.0.7",
     "description": "MultiQC provides reports on a variety of workflow outputs.",
     "parameters": [],
     "file_relationship": {
