@@ -12,9 +12,9 @@
       "name": "List of N Input Files",
       "input_files": [
         {
-          "allowed_filetypes": [{"name": "TXT"}],
+          "allowed_filetypes": [{"name": "ZIP"}],
           "name": "Input File",
-          "description": "Select workflow log files"
+          "description": "Select FastQC report .zip file"
         }
       ]
     }
