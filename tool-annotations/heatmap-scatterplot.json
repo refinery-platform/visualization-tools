@@ -17,7 +17,7 @@
          "input_files": [
            {
              "allowed_filetypes": [{"name": "CSV"}],
-             "name": "Count Files & Differential Expression Files",
+             "name": "Select the count file as #1, then hit '▸▸' below and select the differential gene expression file as #2",
              "description": "CSVs with genes as rows and conditions as columns & with differential expression information"
            }
         ]
