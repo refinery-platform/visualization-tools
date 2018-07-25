@@ -1,0 +1,24 @@
+{
+  "name": "Intervene",
+  "tool_type": "VISUALIZATION",
+  "annotation": {
+    "extra_directories": [],
+    "image_name": "mccalluc/intervene:v0.0.4",
+    "description": "Various set intersection visualizations",
+    "parameters": [],
+    "file_relationship": {
+      "file_relationship": {},
+      "value_type": "LIST",
+      "name": "List of Input Files",
+      "input_files": [
+        {
+          "allowed_filetypes": [
+            {"name": "TXT"}
+          ],
+          "name": "Input File",
+          "description": "One line per set element"
+        }
+      ]
+    }
+  }
+}
