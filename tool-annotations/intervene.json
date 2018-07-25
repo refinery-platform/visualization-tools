@@ -2,7 +2,6 @@
   "name": "Intervene",
   "tool_type": "VISUALIZATION",
   "annotation": {
-    "container_input_path": "/tmp/input.json",
     "extra_directories": [],
     "image_name": "mccalluc/intervene:v0.0.4",
     "description": "Various set intersection visualizations",
