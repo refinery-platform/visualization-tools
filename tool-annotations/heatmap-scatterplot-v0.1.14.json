@@ -14,7 +14,7 @@
         {
           "allowed_filetypes": [{"name": "CSV"}],
           "name": "Count Files and Differential Expression Files",
-          "description": "CSVs with genes as rows and conditions as columns and with differential expression information"
+          "description": "CSVs or other tabular files with genes as rows, and either giving conditions as columns, or giving differential expression data."
         }
       ]
     }
