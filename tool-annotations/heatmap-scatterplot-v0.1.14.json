@@ -13,8 +13,8 @@
       "input_files": [
         {
           "allowed_filetypes": [{"name": "CSV"}],
-          "name": "Count Files & Differential Expression Files",
-          "description": "CSVs with genes as rows and conditions as columns & with differential expression information"
+          "name": "Count Files and Differential Expression Files",
+          "description": "CSVs with genes as rows and conditions as columns and with differential expression information"
         }
       ]
     }
