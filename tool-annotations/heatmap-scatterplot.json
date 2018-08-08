@@ -4,7 +4,7 @@
   "annotation": {
     "extra_directories": ["/refinery-data"],
     "image_name": "mccalluc/heatmap_scatter_dash:v0.1.14",
-    "description": "Interactively explore RNA-seq results via heatmap and scatterplot displays.",
+    "description": "Select count and differential expression files from an RNA-seq experiment. The files may be in any tabular format (CSV, TSV, etc.) and may be gzipped. All files should have a header row, and include a gene ID as the first column. If a pair of column headers like 'p-value' and 'log-fold-change' are present, the file will be used for differential expression analysis.",
     "parameters": [],
     "file_relationship": {
       "file_relationship": {},
