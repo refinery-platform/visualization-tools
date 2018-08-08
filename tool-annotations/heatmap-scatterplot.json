@@ -1,5 +1,5 @@
 {
-  "name": "RNA-seq Visualization v0.1.14",
+  "name": "RNA-seq Visualization",
   "tool_type": "VISUALIZATION",
   "annotation": {
     "extra_directories": ["/refinery-data"],
