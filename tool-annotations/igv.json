@@ -4,7 +4,7 @@
   "annotation": {
     "extra_directories": ["/refinery-data"],
     "image_name": "gehlenborglab/docker_igv_js:v0.0.7",
-    "description": "Explore various types of genomic data (see https://github.com/igvteam/igv.js for details).",
+    "description": "Genomic dataset viewer. Select from any of these formats: BED, GFF, WIG, BIGWIG, BEDGRAPH, BAM, VCF, SEG.",
     "parameters": [
       {
         "name": "Genome Build",
