@@ -26,12 +26,13 @@ TOOLS=`python -c 'import requests; print(" ".join([tool["name"].replace(".json",
 ```
 
 Load sample data:
+
+TODO: Do it in the UI until https://github.com/refinery-platform/refinery-platform/issues/2946 is fixed
+
 ```bash
 # Continue in ssh...
-# TODO: Use commandline when the bug is fixed:
-#
-# Meanwhile, download this and load in the UI:
-https://raw.githubusercontent.com/refinery-platform/visualization-tools/master/vis-qa-data.csv
+wget https://raw.githubusercontent.com/refinery-platform/visualization-tools/master/vis-qa-data.csv
+./manage.py process_metadata_table --username vis-qa --title vis-qa-data --file_name vis-qa-data.csv --source_column_index 1 --data_file_column 0 --delimiter comma
 ```
 
 ## Do the QA
@@ -41,8 +42,14 @@ For each tool:
 - Excercise all the functionality.
 - Load some inappropriate data and make sure it fails gracefully.
 
-If there are problems, are they regressions from the currently deployed state that need to be fixed before release, or are they just bugs to be filed?
+If there are problems...
+- regressions from the currently deployed state need to be fixed before release
+- but other bugs can just be filed, probably in the repo for the appropriate tool.
 
 ## Destroy stack
 
-TODO
+```bash
+aws cloudformation delete-stack --stack-name vis-qa
+while aws cloudformation describe-stacks --stack-name vis-qa > /dev/null; do echo 'still up'; sleep 10; done
+for ID in `aws ec2 describe-snapshots --filters Name=tag:aws:cloudformation:stack-name,Values=vis-qa --query 'Snapshots[].[SnapshotId]' --output=text`; do aws ec2 delete-snapshot --snapshot-id $ID; done
+```
