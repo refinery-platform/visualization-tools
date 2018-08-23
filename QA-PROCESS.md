@@ -2,7 +2,26 @@
 
 ## Create stack
 [Follow the directions](https://github.com/refinery-platform/refinery-platform/wiki/AWS-deployment) to bring up the stack.
-TODO: script this.
+After the first-time initialization and creation of a virtual environment it should run like this:
+```bash
+source activate refinery-deploy
+
+cd refinery-platform/deployment/terraform/live/
+terraform workspace delete --force vis-qa
+terraform workspace new vis-qa
+
+# Needs to be run from the terraform directory to fill in the template:
+erb ../../aws-config/config.yaml.erb > ../../aws-config/config.yaml
+
+cd ../..
+perl -i -pne '$_="ADMIN_PASSWORD: admin-password" if /ADMIN_PASSWORD:/' aws-config/config.yaml
+perl -i -pne '$_="SSH_USERS: mccalluc" if /SSH_USERS:/' aws-config/config.yaml
+python stack.py create
+
+# Wait for it to complete:
+aws cloudformation describe-stacks --stack-name vis-qa --query 'Stacks[*].[StackStatus]' --output text
+```
+... or keep an eye on the [AWS console](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks?filter=active).
 
 ## Set up
 Create a user account on the instance:
