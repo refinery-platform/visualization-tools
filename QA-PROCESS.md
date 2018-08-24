@@ -15,7 +15,7 @@ erb ../../aws-config/config.yaml.erb > ../../aws-config/config.yaml
 
 cd ../..
 perl -i -pne '$_="ADMIN_PASSWORD: admin-password" if /ADMIN_PASSWORD:/' aws-config/config.yaml
-perl -i -pne '$_="SSH_USERS: mccalluc" if /SSH_USERS:/' aws-config/config.yaml
+perl -i -pne '$_="SSH_USERS: mccalluc jkmarx scottx611x hackdna" if /SSH_USERS:/' aws-config/config.yaml
 python stack.py create
 
 # Wait for it to complete:
@@ -43,6 +43,16 @@ GIT_API_URL=https://api.github.com/repos/refinery-platform/visualization-tools/c
 TOOLS=`python -c 'import requests; print(" ".join([tool["name"].replace(".json","") for tool in requests.get("'$GIT_API_URL'").json()]))'`
 ./manage.py load_tools --visualizations $TOOLS
 ```
+
+Update DNS: (Because of a virtual host setting or something like that, you can not hit the server directly:
+It needs to have the right hostname and go through ELB.)
+```bash
+ELB_DNS=dualstack.`aws elb describe-load-balancers --load-balancer-names vis-qa --query 'LoadBalancerDescriptions[*].DNSName' --output text`
+ZONE_ID=`aws elb describe-load-balancers --load-balancer-names vis-qa --query 'LoadBalancerDescriptions[*].CanonicalHostedZoneNameID' --output text`
+echo '{"Changes": [{"Action": "UPSERT", "ResourceRecordSet": {"Name": "vis-qa.cloud.refinery-platform.org", "Type": "A", "AliasTarget": {"HostedZoneId": "'$ZONE_ID'", "DNSName": "'$ELB_DNS'", "EvaluateTargetHealth": false}}}]}' > /tmp/dns.json
+aws route53 change-resource-record-sets --hosted-zone-id Z1D2YVM2HNPAQB --change-batch /tmp/dns.json
+```
+(Note that this uses two different Zone IDs: on the commandline, it the zone for our own apex domain, which is different from the domain for the ELB DNS.)
 
 Load sample data:
 
