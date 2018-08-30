@@ -19,13 +19,12 @@ sample.bed.multires.mv5,https://s3.amazonaws.com/pkerp/public/sample.bed.multire
 fruit,https://raw.githubusercontent.com/refinery-platform/intervene-refinery-docker/master/context/fixtures/food/fruit.csv,intervene + lineup,mouse?
 green,https://raw.githubusercontent.com/refinery-platform/intervene-refinery-docker/master/context/fixtures/food/green.tsv,intervene,mouse?
 sweet,https://raw.githubusercontent.com/refinery-platform/intervene-refinery-docker/master/context/fixtures/food/sweet.txt,intervene,mouse?
-bedgraph,https://github.com/igvteam/igv/raw/master/test/data/wig/test_stats.bedgraph,igv,mouse?
-wig,https://github.com/igvteam/igv/raw/master/test/data/wig/test_fixedStep.wig,igv,mouse?
-bigwig,https://github.com/igvteam/igv/raw/master/test/data/wig/dummy_var_sample.bigwig,igv,mouse?
-bam,https://github.com/igvteam/igv/raw/master/test/data/bam/NA12878.SLX.sample.bam,igv,mouse?
-bed,https://github.com/igvteam/igv/raw/master/test/data/bed/GSM1004654_10k.bed,igv,mouse?
-gff,https://github.com/igvteam/igv/raw/master/test/data/gff/NC_009084.gff,igv,mouse?
-gff3,https://github.com/igvteam/igv/raw/master/test/data/gff/musa_trna.gff3,igv,mouse?
-gtf,https://github.com/igvteam/igv/raw/master/test/data/gtf/transcript_id.gtf,igv,mouse?
-vcf,https://github.com/igvteam/igv/raw/master/test/data/vcf/SRP32_v4.sorted.0.vcf,igv,mouse?
-seg,https://github.com/igvteam/igv/raw/master/test/data/seg/canFam2_hg18.seg,igv,mouse?
+bedgraph,https://raw.githubusercontent.com/igvteam/igv/master/test/data/wig/test_stats.bedgraph,igv,mouse?
+wig,https://raw.githubusercontent.com/igvteam/igv/master/test/data/wig/test_fixedStep.wig,igv,mouse?
+bigwig,https://raw.githubusercontent.com/igvteam/igv/master/test/data/wig/dummy_var_sample.bigwig,igv,mouse?
+bam,https://raw.githubusercontent.com/igvteam/igv/master/test/data/bam/NA12878.SLX.sample.bam,igv,mouse?
+bed,https://raw.githubusercontent.com/igvteam/igv/master/test/data/bed/GSM1004654_10k.bed,igv,mouse?
+gff,https://raw.githubusercontent.com/igvteam/igv/master/test/data/gff/NC_009084.gff,igv,mouse?
+gff3,https://raw.githubusercontent.com/igvteam/igv/master/test/data/gff/musa_trna.gff3,igv,mouse?
+gtf,https://raw.githubusercontent.com/igvteam/igv/master/test/data/gtf/transcript_id.gtf,igv,mouse?
+seg,https://raw.githubusercontent.com/igvteam/igv/master/test/data/seg/canFam2_hg18.seg,igv,mouse?
