@@ -2,10 +2,35 @@
 
 ## Create stack
 [Follow the directions](https://github.com/refinery-platform/refinery-platform/wiki/AWS-deployment) to bring up the stack.
-TODO: script this.
+After the first-time initialization and creation of a virtual environment it should run like this:
+```bash
+source activate refinery-deploy
+
+cd refinery-platform/deployment/terraform/live/
+terraform workspace delete --force vis-qa
+terraform workspace new vis-qa
+
+# Needs to be run from the terraform directory to fill in the template:
+erb ../../aws-config/config.yaml.erb > ../../aws-config/config.yaml
+
+cd ../..
+perl -i -pne '$_="ADMIN_PASSWORD: admin-password" if /ADMIN_PASSWORD:/' aws-config/config.yaml
+perl -i -pne '$_="SSH_USERS: mccalluc jkmarx scottx611x hackdna" if /SSH_USERS:/' aws-config/config.yaml
+python stack.py create
+
+# Wait for it to complete:
+aws cloudformation describe-stacks --stack-name vis-qa --query 'Stacks[*].[StackStatus]' --output text
+```
+... or keep an eye on the [AWS console](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks?filter=active).
+
+After the stack comes up, puppet still needs to run. Since we're pulling from 3rd parties, there is always the possibility that
+some resource is down. You can review the log now, or come back to it latter if there are problems.
+```
+tail -f /var/log/cloud-init-output.log
+```
 
 ## Set up
-Create a user account on the instance:
+After puppet completes, create a user account on the instance:
 ```bash
 NAME=vis-qa
 IP=`aws ec2 describe-instances  --filters Name=tag:Name,Values=$NAME --query 'Reservations[].Instances[].PublicIpAddress' --output=text`
@@ -24,6 +49,16 @@ GIT_API_URL=https://api.github.com/repos/refinery-platform/visualization-tools/c
 TOOLS=`python -c 'import requests; print(" ".join([tool["name"].replace(".json","") for tool in requests.get("'$GIT_API_URL'").json()]))'`
 ./manage.py load_tools --visualizations $TOOLS
 ```
+
+Update DNS: (Because of a virtual host setting or something like that, you can not hit the server directly:
+It needs to have the right hostname and go through ELB.)
+```bash
+ELB_DNS=dualstack.`aws elb describe-load-balancers --load-balancer-names vis-qa --query 'LoadBalancerDescriptions[*].DNSName' --output text`
+ZONE_ID=`aws elb describe-load-balancers --load-balancer-names vis-qa --query 'LoadBalancerDescriptions[*].CanonicalHostedZoneNameID' --output text`
+echo '{"Changes": [{"Action": "UPSERT", "ResourceRecordSet": {"Name": "vis-qa.cloud.refinery-platform.org", "Type": "A", "AliasTarget": {"HostedZoneId": "'$ZONE_ID'", "DNSName": "'$ELB_DNS'", "EvaluateTargetHealth": false}}}]}' > /tmp/dns.json
+aws route53 change-resource-record-sets --hosted-zone-id Z1D2YVM2HNPAQB --change-batch /tmp/dns.json
+```
+(Note that this uses two different Zone IDs: on the commandline, it the zone for our own apex domain, which is different from the domain for the ELB DNS.)
 
 Load sample data:
 
