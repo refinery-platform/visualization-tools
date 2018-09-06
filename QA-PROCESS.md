@@ -23,8 +23,14 @@ aws cloudformation describe-stacks --stack-name vis-qa --query 'Stacks[*].[Stack
 ```
 ... or keep an eye on the [AWS console](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks?filter=active).
 
+After the stack comes up, puppet still needs to run. Since we're pulling from 3rd parties, there is always the possibility that
+some resource is down. You can review the log now, or come back to it latter if there are problems.
+```
+tail -f /var/log/cloud-init-output.log
+```
+
 ## Set up
-Create a user account on the instance:
+After puppet completes, create a user account on the instance:
 ```bash
 NAME=vis-qa
 IP=`aws ec2 describe-instances  --filters Name=tag:Name,Values=$NAME --query 'Reservations[].Instances[].PublicIpAddress' --output=text`
