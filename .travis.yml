@@ -35,9 +35,6 @@ install:
   - popd && popd
 
 script:
-  # TODO: Temp fix due to features from 
-  # https://github.com/refinery-platform/refinery-platform/pull/2374 
-  # not being included in refinery-platform's master branch yet.
   - echo $REFINERY_BRANCH
   - python ci_tests.py
 
