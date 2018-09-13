@@ -68,8 +68,8 @@ TODO: Do it in the UI until https://github.com/refinery-platform/refinery-platfo
 
 ```bash
 # Continue in ssh...
-wget https://raw.githubusercontent.com/refinery-platform/visualization-tools/master/vis-qa-data.csv
-./manage.py process_metadata_table --username vis-qa --title vis-qa-data --file_name vis-qa-data.csv --source_column_index 1 --data_file_column 0 --delimiter comma
+wget https://raw.githubusercontent.com/refinery-platform/django_docker_engine/master/demo_path_routing_no_auth/upload/demo-data.csv
+./manage.py process_metadata_table --username vis-qa --title vis-qa-data --file_name demo-data.csv --source_column_index 1 --data_file_column 0 --delimiter comma
 ```
 
 ## Do the QA
