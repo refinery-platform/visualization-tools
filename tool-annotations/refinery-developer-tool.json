@@ -5,6 +5,7 @@
     "extra_directories": ["/refinery-data"],
     "image_name": "scottx611x/refinery-developer-vis-tool:v0.0.7",
     "description": "This visualization tool displays all of the data that Refinery has sent over to it for a given Tool launch",
+    "mem_reservation_mb": 15,
     "parameters": [],
     "file_relationship": {
       "file_relationship": {},

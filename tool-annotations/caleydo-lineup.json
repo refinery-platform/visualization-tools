@@ -5,6 +5,7 @@
     "extra_directories": ["/refinery-data"],
     "image_name": "mccalluc/lineup_refinery:v0.0.8",
     "description": "Create, visualize and explore rankings of items based on a set of heterogeneous attributes. The input files may be in any tabular format (CSV, TSV, etc.) and may be gzipped.",
+    "mem_reservation_mb": 11,
     "parameters": [],
     "file_relationship": {
       "file_relationship": {},
