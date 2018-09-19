@@ -5,6 +5,7 @@
     "extra_directories": ["/refinery-data"],
     "image_name": "scottx611x/refinery-higlass-docker:v0.3.2",
     "description": "Select cooler or bigwig files from Hi-C and explore genome interaction maps. (See http://higlass.io for details).",
+    "mem_reservation_mb": 100,
     "parameters": [],
     "file_relationship": {
       "file_relationship": {},

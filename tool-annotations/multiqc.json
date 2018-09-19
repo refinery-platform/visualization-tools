@@ -5,6 +5,7 @@
     "extra_directories": ["/data"],
     "image_name": "mccalluc/qualimap_multiqc_refinery:v0.0.7",
     "description": "Given a zip file, it is scanned for files representing the summary data of a FastQC run, and a static report with graphs is returned.",
+    "mem_reservation_mb": 20,
     "parameters": [],
     "file_relationship": {
       "file_relationship": {},
