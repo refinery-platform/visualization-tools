@@ -3,7 +3,7 @@
   "tool_type": "VISUALIZATION",
   "annotation": {
     "extra_directories": [],
-    "image_name": "mccalluc/intervene:v0.0.5",
+    "image_name": "mccalluc/intervene:v0.0.8",
     "description": "Set intersection visualizations. Each file provided represents a set: Either one item per line, or, if it is a tabular format with multiple columns, only the first column is taken. If p-value and fold-change columns are present, your filters will be applied.",
     "mem_reservation_mb": 208,
     "parameters": [],
