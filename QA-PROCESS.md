@@ -41,12 +41,12 @@ aws route53 change-resource-record-sets --hosted-zone-id Z1D2YVM2HNPAQB --change
 At this point, puppet may still be running. Log in, tail the log, and wait for `Cloud-init v. x.y.z finished`:
 ```bash
 IP=`aws ec2 describe-instances  --filters Name=tag:Name,Values=$NAME --query 'Reservations[].Instances[].PublicIpAddress' --output=text`
-ssh -i ~/.ssh/mccalluc.pem ubuntu@$IP
-tail -f /var/log/cloud-init-output.log
+ssh -i ~/.ssh/mccalluc.pem ubuntu@$IP tail -f /var/log/cloud-init-output.log
 ```
 
 After puppet completes, create a user account on the instance:
 ```
+ssh -i ~/.ssh/mccalluc.pem ubuntu@$IP 
 cd /srv/refinery-platform/refinery
 workon refinery-platform
 USERNAME=vis-qa
