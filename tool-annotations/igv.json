@@ -3,7 +3,7 @@
   "tool_type": "VISUALIZATION",
   "annotation": {
     "extra_directories": ["/refinery-data"],
-    "image_name": "gehlenborglab/docker_igv_js:v0.0.10",
+    "image_name": "gehlenborglab/docker_igv_js:v0.0.11",
     "description": "Genomic dataset viewer. Select from any of these formats: BED, GFF, WIG, BIGWIG, BEDGRAPH, BAM, VCF, SEG.",
     "mem_reservation_mb": 15,
     "parameters": [
